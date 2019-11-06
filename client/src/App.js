@@ -1,13 +1,14 @@
 import React from 'react';
+import Navbar from './components/navbar';
+import HomepageContent from './components/homepage-content';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-light bg-light">
-        <span className="navebar-brand h3 font-weight-bold">Eureka</span>
-      </nav>
-    </div>
+      <Navbar />
+      <HomepageContent />
+    </div >
   );
 }
 
