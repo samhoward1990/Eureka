@@ -1,5 +1,7 @@
 import React from 'react';
 import lightbulb from '../images/lightbulb.png';
+import GenerateButton from './generate-button';
+
 
 class HomepageContent extends React.Component {
     render() {
@@ -25,6 +27,7 @@ class HomepageContent extends React.Component {
 
 
                         </div>
+                        <GenerateButton />
                     </div>
                 </div>
             </div>
