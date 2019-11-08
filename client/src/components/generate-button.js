@@ -1,36 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Generate extends Component {
-    state = {
-        topic: ""
-    };
-
-    handleClick = () => {
-
-        let topic = this.randomizedTopic();
-        console.log(topic)
-        this.setState({
-            topic: topic
-        });
-
-    }
-
-    randomizedTopic() {
-        let randomizedNumber = Math.floor(Math.random() * topicDATA.length - 1);
-        return topicDATA[randomizedNumber];
-    }
-
-    render() {
-        return (
-            <div>
-                <button className="btn btn-outline-secondary" onClick={this.handleClick}>Generate</button>
-            </div>
-        );
-    }
+export function Generate(props) {
+    return (
+        <button onClick={e => { props.handleClick(e); }}> Generate</button>
+    );
 }
-
-const topicDATA =
-    ["Math", "History", "Technology", "Counseling"]
-
 
 export default Generate;
