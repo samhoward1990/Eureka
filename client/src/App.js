@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
+import Signin from './components/sign-in';
 import './App.css';
-
-
 function App() {
   return (
     <Router>
@@ -13,7 +12,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/sign-in">
-            <h1>Hello please sign in</h1>
+            <Signin />
           </Route>
           <Route path="/">
             <HomepageContent />
