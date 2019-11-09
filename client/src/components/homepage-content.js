@@ -1,5 +1,6 @@
 import React from 'react';
-import lightbulb from '../images/lightbulb.png';
+
+import brainstorm from '../images/brainstorm.gif'
 import GenerateButton from './generate-button';
 
 
@@ -32,16 +33,21 @@ class HomepageContent extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 d-flex justify-content-center">
-                        <img className="mb-3" src={lightbulb} alt="Eureka!" />
+                        <img src={brainstorm} />
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-12 d-flex justify-content-center">
-                        <h2>About Us</h2>
+                    <div className="col-12 d-flex justify-content-center">
+                        <div className="card col-6 bg-light mb-3">
+                            <div className="card-body">
+                                <h2 className="card-title">About Us</h2>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="row d-flex justify-content-center">
-                    <div className="card col-sm-6">
+                    <div className="card col-6 mb-3 bg-light">
 
                         <div className="card-body">
                             <h3 className="card-title">Here is your topic: {this.state.topic}</h3>
@@ -51,10 +57,10 @@ class HomepageContent extends React.Component {
 
 
                         </div>
-                        <GenerateButton handleClick={this.generateTopic}> </GenerateButton>
                         {/* <button onClick={e => { this.generateTopic(e); }}> Generate</button> */}
                     </div>
                 </div>
+                <GenerateButton handleClick={this.generateTopic}> </GenerateButton>
             </div>
         );
     }
