@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Discussion from './components/Discussion/Discussion';
 import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
+import Signin from './components/sign-in';
 import './App.css';
 import Art from './components/Discussion/Blogs/Art';
 import Music from './components/Discussion/Blogs/Music';
@@ -44,6 +45,7 @@ function App() {
 
           <Route path="/discussion/music">
             <Music/>
+            <Signin />
           </Route>
           
           

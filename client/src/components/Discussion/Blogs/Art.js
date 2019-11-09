@@ -1,77 +1,77 @@
-import React from 'react'
-import { Button, Comment, Form, Header } from 'semantic-ui-react'
+import React, { Component } from 'react'
+import { Checkbox, Comment } from 'semantic-ui-react'
 
-const Art = () => (
-  <Comment.Group threaded>
-    <Header as='h3' dividing>
-      Comments
-    </Header>
+export default class Art extends Component {
+  state = { collapsed: true }
 
-    <Comment>
-      <Comment.Avatar as='a' src='/images/avatar/small/matt.jpg' />
-      <Comment.Content>
-        <Comment.Author as='a'>Matt</Comment.Author>
-        <Comment.Metadata>
-          <span>Today at 5:42PM</span>
-        </Comment.Metadata>
-        <Comment.Text>How artistic!</Comment.Text>
-        <Comment.Actions>
-          <a>Reply</a>
-        </Comment.Actions>
-      </Comment.Content>
-    </Comment>
+  handleCheckbox = (e, { checked }) => this.setState({ collapsed: checked })
 
-    <Comment>
-      <Comment.Avatar as='a' src='/images/avatar/small/elliot.jpg' />
-      <Comment.Content>
-        <Comment.Author as='a'>Elliot Fu</Comment.Author>
-        <Comment.Metadata>
-          <span>Yesterday at 12:30AM</span>
-        </Comment.Metadata>
-        <Comment.Text>
-          <p>This has been very useful for my research. Thanks as well!</p>
-        </Comment.Text>
-        <Comment.Actions>
-          <a>Reply</a>
-        </Comment.Actions>
-      </Comment.Content>
+  render() {
+    const { collapsed } = this.state
 
-      <Comment.Group>
-        <Comment>
-          <Comment.Avatar as='a' src='/images/avatar/small/jenny.jpg' />
-          <Comment.Content>
-            <Comment.Author as='a'>Jenny Hess</Comment.Author>
-            <Comment.Metadata>
-              <span>Just now</span>
-            </Comment.Metadata>
-            <Comment.Text>Elliot you are always so right :)</Comment.Text>
-            <Comment.Actions>
-              <a>Reply</a>
-            </Comment.Actions>
-          </Comment.Content>
-        </Comment>
-      </Comment.Group>
-    </Comment>
+    return (
+      <div>
+        <Checkbox
+          defaultChecked
+          label='Collapse comments'
+          onChange={this.handleCheckbox}
+        />
 
-    <Comment>
-      <Comment.Avatar as='a' src='/images/avatar/small/joe.jpg' />
-      <Comment.Content>
-        <Comment.Author as='a'>Joe Henderson</Comment.Author>
-        <Comment.Metadata>
-          <span>5 days ago</span>
-        </Comment.Metadata>
-        <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
-        <Comment.Actions>
-          <a>Reply</a>
-        </Comment.Actions>
-      </Comment.Content>
-    </Comment>
+        <Comment.Group>
+          <Comment>
+            <Comment.Avatar as='a' src='https://react.semantic-ui.com/images/avatar/small/christian.jpg' />
+            <Comment.Content>
+              <Comment.Author as='a'>Christian Rocha</Comment.Author>
+              <Comment.Metadata>
+                <span>2 days ago</span>
+              </Comment.Metadata>
+              <Comment.Text>
+                I'm very interested in this motherboard. Do you know if it'd
+                work in a Intel LGA775 CPU socket?
+              </Comment.Text>
+              <Comment.Actions>
+                <a>Reply</a>
+              </Comment.Actions>
+            </Comment.Content>
 
-    <Form reply>
-      <Form.TextArea />
-      <Button content='Add Reply' labelPosition='left' icon='edit' primary />
-    </Form>
-  </Comment.Group>
-)
+            <Comment.Group collapsed={collapsed}>
+              <Comment>
+                <Comment.Avatar as='a' src='https://react.semantic-ui.com/images/avatar/small/elliot.jpg' />
+                <Comment.Content>
+                  <Comment.Author as='a'>Elliot Fu</Comment.Author>
+                  <Comment.Metadata>
+                    <span>1 day ago</span>
+                  </Comment.Metadata>
+                  <Comment.Text>No, it wont</Comment.Text>
+                  <Comment.Actions>
+                    <a>Reply</a>
+                  </Comment.Actions>
+                </Comment.Content>
 
-export default Art
+                <Comment.Group>
+                  <Comment>
+                    <Comment.Avatar
+                      as='a'
+                      src='https://react.semantic-ui.com/images/avatar/small/jenny.jpg'
+                    />
+                    <Comment.Content>
+                      <Comment.Author as='a'>Jenny Hess</Comment.Author>
+                      <Comment.Metadata>
+                        <span>20 minutes ago</span>
+                      </Comment.Metadata>
+                      <Comment.Text>Maybe it would.</Comment.Text>
+                      <Comment.Actions>
+                        <a>Reply</a>
+                      </Comment.Actions>
+                    </Comment.Content>
+                  </Comment>
+                </Comment.Group>
+              </Comment>
+            </Comment.Group>
+          </Comment>
+        </Comment.Group>
+      </div>
+    )
+  }
+}
+
