@@ -11,7 +11,6 @@ class Navbar extends React.Component {
                     <div className="nav">
                         <Link to="/"><button className="btn btn-outline-secondary mr-2">Home</button></Link>
                         <Link to="/sign-in"><button className="btn btn-outline-secondary">Sign in</button></Link>
-
                         {/* <a className="nav-item" href="../../public/index.html"><button className="btn btn-outline-secondary">Home</button></a>
                         <a className="nav-item ml-2" href="../../public/sign-in.html"><button className="btn btn-outline-secondary">Sign in</button></a> */}
                     </div>

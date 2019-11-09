@@ -1,7 +1,17 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require('mongoose');
+const passport = require('passport');
 const PORT = process.env.PORT || 3001;
+const serverConfigs = require('./config/serverConfig');
+
+// connect to database
+mongoose.connect(serverConfigs.DBURL);
+
 const app = express();
+
+// apply express configs
+require('./backend/express')(app, serverConfigs);
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -22,3 +32,5 @@ app.get("*", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
+
+
