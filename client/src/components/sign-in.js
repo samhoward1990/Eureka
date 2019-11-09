@@ -6,7 +6,7 @@ class Signin extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 d-flex justify-content-center mt-5">
-                        <div className="card bg-light">
+                        <div className="card bg-light col-4">
                             <div className="card-body">
                                 <h1 className="card-title">Sign in</h1>
                                 <form>
