@@ -17,6 +17,8 @@ function App() {
           <Route path="/">
             <HomepageContent />
           </Route>
+          <Route path="/discussionboards">
+          </Route>
         </Switch>
       </div >
 
