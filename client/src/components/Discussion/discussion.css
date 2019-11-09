@@ -1,0 +1,27 @@
+#health {
+    background-color: pink;
+    height: 100px;
+}
+
+#art {
+
+    background-color: blueviolet;
+    height: 100px;
+}
+
+#education {
+
+    background-color: greenyellow;
+    height: 100px;
+}
+#music {
+
+    background-color:teal;
+    height: 100px;
+}
+
+#food {
+
+    background-color: rgb(218, 216, 214);
+    height: 100px;
+}
