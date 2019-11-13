@@ -17,10 +17,10 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        
+
         <Switch>
           <Route path="/sign-in">
-           <h1>Hello please sign in</h1>
+            <Signin />
           </Route>
 
           <Route path="/discussion" exact>
@@ -28,31 +28,30 @@ function App() {
           </Route>
 
           <Route path="/discussion/art">
-            <Art/>
+            <Art />
           </Route>
 
           <Route path="/discussion/education">
-            <Education/>
+            <Education />
           </Route>
 
           <Route path="/discussion/food">
-            <Food/>
+            <Food />
           </Route>
 
           <Route path="/discussion/health">
-            <Health/>
+            <Health />
           </Route>
 
           <Route path="/discussion/music">
-            <Music/>
-            <Signin />
+            <Music />
           </Route>
-          
-          
+
+
           <Route path="/">
             <HomepageContent />
           </Route>
-</Switch>
+        </Switch>
       </div >
 
     </Router>
