@@ -3,8 +3,16 @@ import { Link } from 'react-router-dom';
 
 
 class Navbar extends React.Component {
+
     render() {
+        let usernav = null;
+        if (this.props.user) {
+            usernav = (
+                <Link to="/"><button className="ui blue button mr-2"><i className="fas fa-home"></i> Art</button></Link>
+            )
+        }
         return (
+
             <nav className="navbar navbar-success bg-success mb-3">
                 <span className="navbar-brand h3 font-weight-bold"><i className="far fa-lightbulb"></i> Eureka</span>
                 <div className="d-flex justify-content-end">

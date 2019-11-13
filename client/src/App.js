@@ -13,14 +13,21 @@ import Health from './components/Discussion/Blogs/Health';
 
 
 function App() {
+  let user = null
+  // temp 
+  // user = {
+  //   name: "fred",
+  //   email: "fred123@gmail.com"
+
+  // }
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        
+        <Navbar user={user} />
+
         <Switch>
           <Route path="/sign-in">
-           <h1>Hello please sign in</h1>
+            <Signin />
           </Route>
 
           <Route path="/discussion" exact>
@@ -28,37 +35,31 @@ function App() {
           </Route>
 
           <Route path="/discussion/art">
-            <Art/>
+            <Art />
           </Route>
 
           <Route path="/discussion/education">
-            <Education/>
+            <Education />
           </Route>
 
           <Route path="/discussion/food">
-            <Food/>
+            <Food />
           </Route>
 
           <Route path="/discussion/health">
-            <Health/>
+            <Health />
           </Route>
 
           <Route path="/discussion/music">
-            <Music/>
+            <Music />
             <Signin />
           </Route>
-          
-          
+
+
           <Route path="/">
             <HomepageContent />
           </Route>
-<<<<<<< HEAD
-          <Route path="/discussionboards">
-          </Route>
         </Switch>
-=======
-</Switch>
->>>>>>> 8b959b97c89f1271707a9975e7b3bbf951a312d9
       </div >
 
     </Router>

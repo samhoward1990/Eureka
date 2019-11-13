@@ -5,21 +5,25 @@ import './Blogs/Art'
 
 class Discussion extends React.Component {
     render() {
-        return(
-       
-       <div className="container">
-           <h1 id='art'><Link to="/discussion/art">ARTS & CRAFTS</Link></h1>
-           
-           <h2 id= 'music'><Link to="/discussion/music"> MUSIC </Link></h2>
-           
-           <h3 id= 'education'><Link to="/discussion/education">EDUCATION</Link></h3>
-           
-           <h4 id= 'food'><Link to="/discussion/food">FOOD</Link></h4>
-           
-           <h5 id= 'health'><Link to="/discussion/health">HEALTH & FITNESS</Link></h5>
-            
+        return (
+
+            <div className="container">
+                <h1 id='art'><Link to="/discussion/art">ARTS & CRAFTS</Link>
+
+                    <p></p>
+                </h1>
+
+
+                <h1 id='music'><Link to="/discussion/music"> MUSIC </Link></h1>
+
+                <h1 id='education'><Link to="/discussion/education">EDUCATION</Link></h1>
+
+                <h1 id='food'><Link to="/discussion/food">FOOD</Link></h1>
+
+                <h1 id='health'><Link to="/discussion/health">HEALTH & FITNESS</Link></h1>
+
             </div>
-            )
+        )
 
     }
 
