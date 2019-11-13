@@ -10,7 +10,7 @@ class Navbar extends React.Component {
                 <div className="d-flex justify-content-end">
                     <div className="nav">
                         <Link to="/"><button className="ui blue button mr-2"><i className="fas fa-home"></i> Home</button></Link>
-                        <Link to="/sign-in"><button className="ui red button"><i className="fas fa-sign-in-alt"></i> Sign in</button></Link>
+                        <Link to="/Discussion"><button className="ui red button"><i className="fas fa-sign-in-alt"></i> Blog</button></Link>
 
                         {/* <a className="nav-item" href="../../public/index.html"><button className="btn btn-outline-secondary">Home</button></a>
                         <a className="nav-item ml-2" href="../../public/sign-in.html"><button className="btn btn-outline-secondary">Sign in</button></a> */}
