@@ -1,10 +1,12 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Discussion from './components/Discussion/Discussion';
 import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
 import Signin from './components/sign-in';
-import './App.css';
+import Register from './components/register';
 import Art from './components/Discussion/Blogs/Art';
 import Music from './components/Discussion/Blogs/Music';
 import Education from './components/Discussion/Blogs/Education';
@@ -17,10 +19,14 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        
+
         <Switch>
           <Route path="/sign-in">
-           <h1>Hello please sign in</h1>
+            <Signin />
+          </Route>
+          <Route path="/register">
+            <Register />
+
           </Route>
 
           <Route path="/discussion" exact>
@@ -28,31 +34,30 @@ function App() {
           </Route>
 
           <Route path="/discussion/art">
-            <Art/>
+            <Art />
           </Route>
 
           <Route path="/discussion/education">
-            <Education/>
+            <Education />
           </Route>
 
           <Route path="/discussion/food">
-            <Food/>
+            <Food />
           </Route>
 
           <Route path="/discussion/health">
-            <Health/>
+            <Health />
           </Route>
 
           <Route path="/discussion/music">
-            <Music/>
-            <Signin />
+            <Music />
           </Route>
-          
-          
+
+
           <Route path="/">
             <HomepageContent />
           </Route>
-</Switch>
+        </Switch>
       </div >
 
     </Router>
