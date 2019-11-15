@@ -1,8 +1,10 @@
+require('dotenv').config();
 const express = require("express");
 const path = require("path");
 const mongoose = require('mongoose');
 const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
+const MongoURI = require("./config/models/keys").MongoURI
 // const router = require('./routes/index');
 // const userroute = require('./routes/users');
 // const serverConfigs = require('./config/serverConfig');
