@@ -33,7 +33,7 @@ class HomepageContent extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-sm-12 d-flex justify-content-center">
-                        <img src={brainstorm} />
+                        <img src={brainstorm} alt="Brainstorming" />
                     </div>
                 </div>
                 <div className="row">
