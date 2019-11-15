@@ -1,10 +1,12 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import Discussion from './components/Discussion/Discussion';
 import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
 import Signin from './components/sign-in';
-import './App.css';
+import Register from './components/register';
 import Art from './components/Discussion/Blogs/Art';
 import Music from './components/Discussion/Blogs/Music';
 import Education from './components/Discussion/Blogs/Education';
@@ -21,6 +23,10 @@ function App() {
         <Switch>
           <Route path="/sign-in">
             <Signin />
+          </Route>
+          <Route path="/register">
+            <Register />
+
           </Route>
 
           <Route path="/discussion" exact>
