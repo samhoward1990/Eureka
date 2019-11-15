@@ -2,6 +2,32 @@ import React from 'react';
 import { Card } from 'semantic-ui-react';
 
 class Register extends React.Component {
+
+    state = {
+        firstname: "",
+        lastname: "",
+        email: "",
+        password: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.setState({
+            firstname: "",
+            lastname: "",
+            email: "",
+            password: ""
+        });
+        console.log(this.state)
+    };
     render() {
         return (
             <div className="container">
@@ -12,18 +38,18 @@ class Register extends React.Component {
                                 <h3 className="card-title">Register</h3>
                                 <form>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" id="first-name" placeholder="First Name"></input>
+                                        <input type="text" className="form-control" placeholder="First Name" name="firstname" value={this.state.firstname} onChange={this.handleInputChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" id="last-name" placeholder="Last Name"></input>
+                                        <input type="text" className="form-control" placeholder="Last Name" name="lastname" value={this.state.lastname} onChange={this.handleInputChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="email" className="form-control" id="email" placeholder="Email"></input>
+                                        <input type="email" className="form-control" placeholder="Email" name="email" value={this.state.email} onChange={this.handleInputChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="password" className="form-control" id="password" placeholder="Password"></input>
+                                        <input type="password" className="form-control" id="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleInputChange}></input>
                                     </div>
-                                    <button className="btn btn-outline-secondary btn-block">Submit</button>
+                                    <button onClick={this.handleFormSubmit} className="btn btn-outline-secondary btn-block">Submit</button>
                                 </form>
                             </div>
                         </div>
