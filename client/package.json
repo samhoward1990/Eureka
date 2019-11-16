@@ -2,8 +2,9 @@
   "name": "eureka",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost3001",
+  "proxy": "http://localhost:3001",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
