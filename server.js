@@ -42,6 +42,7 @@ if (process.env.NODE_ENV === "production") {
 // });
 
 app.use(routes);
+console.log('mongo', process.env.MONGODB_URI);
 
 
 
