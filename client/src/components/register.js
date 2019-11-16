@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from 'semantic-ui-react';
 
 class Register extends React.Component {
@@ -51,11 +52,12 @@ class Register extends React.Component {
                                     </div>
                                     <button onClick={this.handleFormSubmit} className="btn btn-outline-secondary btn-block">Submit</button>
                                 </form>
+                                <p>Already have an account? Click here:</p><Link to="/sign-in"><a>Sign in</a></Link>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }
