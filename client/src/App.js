@@ -12,7 +12,7 @@ import Music from './components/Discussion/Blogs/Music';
 import Education from './components/Discussion/Blogs/Education';
 import Food from './components/Discussion/Blogs/Food';
 import Health from './components/Discussion/Blogs/Health';
-
+import Chat from './components/Chat/App'
 
 function App() {
   return (
@@ -31,6 +31,10 @@ function App() {
 
           <Route path="/discussion" exact>
             <Discussion />
+          </Route>
+
+          <Route path="/Chat/">
+            <Chat />
           </Route>
 
           <Route path="/discussion/art">
