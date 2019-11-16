@@ -19,7 +19,7 @@ class Signin extends React.Component {
                                     </div>
                                     <button type="submit" className="btn btn-outline-secondary btn-block">Sign in</button>
                                 </form>
-                                <p>No account click here:</p><Link to="/register"><a>Register</a></Link>
+                                <p>No account? click here:</p><Link to="/register"><a>Register</a></Link>
                             </div>
 
                         </div>
