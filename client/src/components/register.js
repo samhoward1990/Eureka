@@ -1,11 +1,12 @@
 import React from 'react';
 import { Card } from 'semantic-ui-react';
+import API from "../utils/API";
 
 class Register extends React.Component {
 
     state = {
-        firstname: "",
-        lastname: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: ""
     };
@@ -20,13 +21,18 @@ class Register extends React.Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
+        // create user
+        console.log(this.state);
+        API.registerUser(this.state)
+            .then(res => console.log('registered user!', res.data))
+            .catch(err => console.log('error: ', err));
+        // set up new state
         this.setState({
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastName: "",
             email: "",
             password: ""
         });
-        console.log(this.state)
     };
     render() {
         return (
@@ -38,10 +44,10 @@ class Register extends React.Component {
                                 <h3 className="card-title">Register</h3>
                                 <form>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="First Name" name="firstname" value={this.state.firstname} onChange={this.handleInputChange}></input>
+                                        <input type="text" className="form-control" placeholder="First Name" name="firstName" value={this.state.firstName} onChange={this.handleInputChange}></input>
                                     </div>
                                     <div className="form-group">
-                                        <input type="text" className="form-control" placeholder="Last Name" name="lastname" value={this.state.lastname} onChange={this.handleInputChange}></input>
+                                        <input type="text" className="form-control" placeholder="Last Name" name="lastName" value={this.state.lastName} onChange={this.handleInputChange}></input>
                                     </div>
                                     <div className="form-group">
                                         <input type="email" className="form-control" placeholder="Email" name="email" value={this.state.email} onChange={this.handleInputChange}></input>
@@ -60,3 +66,4 @@ class Register extends React.Component {
     }
 }
 export default Register;
+

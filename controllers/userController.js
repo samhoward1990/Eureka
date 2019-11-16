@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../config/models");
 const bcrypt = require("bcrypt");
 
 // Defining methods for the bookController
@@ -16,10 +16,16 @@ module.exports = {
   create: function(req, res) {
     const newUser = req.body;
     newUser.password = bcrypt.hashSync(req.body.password, 10);
+    console.log('newUser', newUser);
 
+      console.log('db', db);
     db.User.create(req.body)
-      .then(dbUser => res.json(dbUser))
-      .catch(err => res.status(422).json(err));
+      .then(dbUser => {
+        console.log('dbuser', dbUser);
+        res.json(dbUser)})
+      .catch(err => {
+        console.log(err);
+        res.status(422).json(err)});
   },
   login: function(req, res) {
     db.User.findOne({ email: req.body.email })
