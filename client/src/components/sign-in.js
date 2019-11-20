@@ -17,7 +17,7 @@ class Signin extends React.Component {
                                     <div className="form-group">
                                         <input type="password" className="form-control" id="password" placeholder="Password"></input>
                                     </div>
-                                    <button type="submit" className="btn btn-outline-secondary btn-block">Sign in</button>
+                                    <Link to="/discussion"><button type="submit" className="btn btn-outline-secondary btn-block">Sign in</button></Link>
                                 </form>
                                 No account? <Link to="/register"><a>Register</a></Link>
                             </div>

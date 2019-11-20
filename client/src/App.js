@@ -26,22 +26,16 @@ function App() {
   return (
     <Router>
       <div className="App">
-<<<<<<< HEAD
-        <Navbar user={user} />
-=======
+        {/* <Navbar user={user} /> */}
         <Navbar />
->>>>>>> b4237590409954dcd015aae161af26562aaa8f3d
 
         <Switch>
           <Route path="/sign-in">
             <Signin />
-<<<<<<< HEAD
-=======
           </Route>
           <Route path="/register">
             <Register />
 
->>>>>>> b4237590409954dcd015aae161af26562aaa8f3d
           </Route>
 
           <Route path="/discussion" exact>
@@ -70,10 +64,7 @@ function App() {
 
           <Route path="/discussion/music">
             <Music />
-<<<<<<< HEAD
-            <Signin />
-=======
->>>>>>> b4237590409954dcd015aae161af26562aaa8f3d
+
           </Route>
 
           <Route path="/discussion/fashion">
