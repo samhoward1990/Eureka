@@ -1,4 +1,7 @@
-require('dotenv').config();
+require('dotenv').config({ path: '.env' });
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const express = require("express");
 const path = require("path");
 const mongoose = require('mongoose');
@@ -13,6 +16,11 @@ const MongoURI = require("./config/models/keys").MongoURI
 // mongoose.connect(serverConfigs.DBURL);
 
 const app = express();
+
+// const chatkit = new Chatkit.default({
+//   instanceLocator: process.env.CHATKIT_INSTANCE_LOCATOR,
+//   key: process.env.CHATKIT_SECRET_KEY,
+// });
 
 // apply express configs
 // require('./backend/express')(app, serverConfigs);
@@ -36,11 +44,52 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 console.log('mongo', process.env.MONGODB_URI);
 
+
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// app.post('/users', (req, res) => {
+//   const { userId } = req.body;
+// console.log('/users')
+//   chatkit
+//     .createUser({
+//       id: userId,
+//       name: userId,
+//     })
+//     .then(() => {
+//       res.sendStatus(201);
+//       console.log('.then')
+//     })
+//     .catch(err => {
+//       console.log('.catch')
+//       console.log(err)
+//       if (err.error === 'services/chatkit/user_already_exists') {
+//         console.log(`User already exists: ${userId}`);
+//         res.sendStatus(200);
+
+        
+//       } else {
+//         res.status(err.status).json(err);
+//       }
+//     });
+// });
+
+// app.post('/authenticate', (req, res) => {
+//   console.log('authenticate')
+//   const authData = chatkit.authenticat/e({
+//     userId: req.query.user_id,
+//   });
+//   res.status(authData.status).send(authData.body);
+// });
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mernDb");
 app.listen(PORT);
 
 // app.listen(PORT, () => {
 //   console.log(`🌎 ==> API server now on port ${PORT}!`);
 // });
+
 
 
