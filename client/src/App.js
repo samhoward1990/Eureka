@@ -16,9 +16,17 @@ import Chat from './components/Chat/Chat';
 import fashion from './components/Discussion/Blogs/fashion';
 
 function App() {
+  let user = null
+  // temp 
+  // user = {
+  //   name: "fred",
+  //   email: "fred123@gmail.com"
+
+  // }
   return (
     <Router>
       <div className="App">
+        {/* <Navbar user={user} /> */}
         <Navbar />
 
         <Switch>
@@ -56,6 +64,7 @@ function App() {
 
           <Route path="/discussion/music">
             <Music />
+
           </Route>
 
           <Route path="/discussion/fashion">
