@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class Music extends React.Component {
+class music extends React.Component {
     render() {
         return (
             <div className="container">
@@ -16,4 +16,4 @@ class Music extends React.Component {
 
 };
 
-export default Music;
+export default music;
