@@ -2,17 +2,18 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Discussion from './components/Discussion/Discussion';
+import Discussion from './components/Discussion/discussion';
 import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
 import Signin from './components/sign-in';
 import Register from './components/register';
 import Art from './components/Discussion/Blogs/Art';
 import Music from './components/Discussion/Blogs/Music';
-import Education from './components/Discussion/Blogs/Education';
+import Admin from './components/Discussion/Blogs/Admin';
 import Food from './components/Discussion/Blogs/Food';
 import Health from './components/Discussion/Blogs/Health';
-
+import Chat from './components/Chat/Chat';
+import fashion from './components/Discussion/Blogs/fashion';
 
 function App() {
   let user = null
@@ -47,12 +48,16 @@ function App() {
             <Discussion />
           </Route>
 
+          <Route path="/Chat">
+            <Chat />
+          </Route>
+
           <Route path="/discussion/art">
             <Art />
           </Route>
 
-          <Route path="/discussion/education">
-            <Education />
+          <Route path="/discussion/admin">
+            <Admin />
           </Route>
 
           <Route path="/discussion/food">
@@ -69,6 +74,10 @@ function App() {
             <Signin />
 =======
 >>>>>>> b4237590409954dcd015aae161af26562aaa8f3d
+          </Route>
+
+          <Route path="/discussion/fashion">
+            <fashion />
           </Route>
 
 

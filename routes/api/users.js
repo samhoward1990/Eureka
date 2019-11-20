@@ -12,4 +12,11 @@ router.route("/login").post(userController.login);
 // Matches with "/api/user/:id"
 router.route("/:id").get(userController.findById);
 
+
+
+
+
+
+
+
 module.exports = router;

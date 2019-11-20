@@ -1,27 +1,41 @@
-#health {
-    background-color: pink;
-    height: 100px;
-}
+#heading {
+  color: #111; font-family: Bookman, URW Bookman L, serif; 
+  font-size: 30px; 
+font-weight: bold; 
+text-align: right;
+letter-spacing: -1px;
+text-shadow: 1px 1px 2px yellow;}
 
-#art {
 
-    background-color: blueviolet;
-    height: 100px;
-}
 
-#education {
 
-    background-color: greenyellow;
-    height: 100px;
-}
-#music {
-
-    background-color:teal;
-    height: 100px;
-}
-
+#art, 
+#music, 
+#health, 
+#education, 
+#fashion, 
 #food {
-
-    background-color: rgb(218, 216, 214);
-    height: 100px;
+    height: 4em;
+    border-radius: 50px / 15px;
+    border-image: url(./images/gold.jpg) 5px;
+    box-shadow: 10px 10px 5px grey;
 }
+
+.link:hover {
+    cursor: pointer;
+    background-color: black;
+  }
+
+ 
+  .img {
+    opacity: 1;
+    background-color: red;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img {
+    
+	opacity: 30%;
+}
+
+

@@ -5,28 +5,28 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 // Creating a new User Schema object
-var ArticleSchema = new Schema({
+var PostSchema = new Schema({
 
     title: {
         type: String,
         required: true
     },
-    summary: {
+    content: {
         type: String,
         required: true
     },
-    link: {
-        type: String,
-        required: true
-    },
-    notes: [{
-        type: Schema.Types.ObjectId,
-        ref: "Note"
-    }]
+    // link: {
+    //     type: String,
+    //     required: true
+    // },
+    // notes: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: "Note"
+    // }]
 });
 
 //Create using mongoose's model method
-var Article = mongoose.model("Article", ArticleSchema);
+var Post = mongoose.model("Post", PostSchema);
 
 // Exporting Article 
-module.exports = Article;
+module.exports = Post;
