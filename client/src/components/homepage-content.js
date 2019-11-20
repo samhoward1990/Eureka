@@ -40,7 +40,8 @@ class HomepageContent extends React.Component {
                     <div className="col-12 d-flex justify-content-center">
                         <div className="card col-6 bg-light mb-3">
                             <div className="card-body">
-                                <h2 className="card-title">About Us</h2>
+                                <h2 className="card-title">A little bit about Eureka...</h2>
+                                <p className="card-text">Welcome to Eureka! Eureka is a social forum that allows users to discuss forward-thinking ideas with other members. For help getting started on an idea press the generate button to be given a topic. After receiving a topic, hit the Blogs button to sign in and start connecting.</p>
 
                             </div>
                         </div>
