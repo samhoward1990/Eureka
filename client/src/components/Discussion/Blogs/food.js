@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-class Food extends React.Component {
+class food extends React.Component {
     render() {
         return(
             <div className="container">
@@ -16,4 +16,4 @@ class Food extends React.Component {
  
  };
 
-export default Food;
+export default food;
