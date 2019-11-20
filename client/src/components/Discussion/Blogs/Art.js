@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Checkbox, Comment } from 'semantic-ui-react'
 
-export default class Art extends Component {
+export default class art extends Component {
   state = { collapsed: true }
 
   handleCheckbox = (e, { checked }) => this.setState({ collapsed: checked })

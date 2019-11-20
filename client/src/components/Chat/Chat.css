@@ -23,7 +23,7 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   background-color: black;
-  color: black;
+  color: rgb(241, 235, 235);
  border: red;
 }
 

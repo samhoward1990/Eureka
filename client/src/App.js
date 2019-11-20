@@ -7,11 +7,11 @@ import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
 import Signin from './components/sign-in';
 import Register from './components/register';
-import Art from './components/Discussion/Blogs/Art';
-import Music from './components/Discussion/Blogs/Music';
+import Art from './components/Discussion/Blogs/art';
+import Music from './components/Discussion/Blogs/music';
 import Admin from './components/Discussion/Blogs/Admin';
-import Food from './components/Discussion/Blogs/Food';
-import Health from './components/Discussion/Blogs/Health';
+import Food from './components/Discussion/Blogs/food';
+import Health from './components/Discussion/Blogs/health';
 import Chat from './components/Chat/Chat';
 import fashion from './components/Discussion/Blogs/fashion';
 

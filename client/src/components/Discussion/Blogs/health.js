@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-class Health extends React.Component {
+class health extends React.Component {
     render() {
         return(
             <div className="container">
@@ -16,4 +16,4 @@ class Health extends React.Component {
  
  };
 
-export default Health;
+export default health;
