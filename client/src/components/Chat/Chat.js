@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import {
   handleInput,
   connectToChatkit,
@@ -13,9 +14,9 @@ import RoomUsers from './RoomUsers';
 
 import 'skeleton-css/css/normalize.css';
 import 'skeleton-css/css/skeleton.css';
-import './App.css';
+import './Chat.css';
 
-class App extends Component {
+class Chat extends Component {
   constructor() {
     super();
     this.state = {
@@ -52,7 +53,7 @@ class App extends Component {
     } = this.state;
 
     return (
-      <div className="App">
+      <div className="Chat">
         <aside className="sidebar left-sidebar">
           {currentUser ? (
             <div className="user-profile">
@@ -110,4 +111,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Chat;
