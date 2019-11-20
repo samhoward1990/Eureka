@@ -7,7 +7,7 @@ import Navbar from './components/navbar';
 import HomepageContent from './components/homepage-content';
 import Signin from './components/sign-in';
 import Register from './components/register';
-import Art from './components/Discussion/Blogs/Art';
+import Art from './components/Discussion/Blogs/art';
 import Music from './components/Discussion/Blogs/music';
 import Admin from './components/Discussion/Blogs/Admin';
 import Food from './components/Discussion/Blogs/food';

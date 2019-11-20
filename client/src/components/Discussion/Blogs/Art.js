@@ -75,4 +75,3 @@ export default class art extends Component {
   }
 }
 
-export default art
