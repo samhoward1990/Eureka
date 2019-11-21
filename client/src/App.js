@@ -9,7 +9,7 @@ import Signin from './components/sign-in';
 import Register from './components/register';
 import Art from './components/Discussion/Blogs/art';
 import Music from './components/Discussion/Blogs/music';
-import Admin from './components/Discussion/Blogs/Admin';
+import Admin from './components/Discussion/Blogs/admin';
 import Food from './components/Discussion/Blogs/food';
 import Health from './components/Discussion/Blogs/health';
 import Chat from './components/Chat/Chat';
