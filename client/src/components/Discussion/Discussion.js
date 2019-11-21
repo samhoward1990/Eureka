@@ -79,4 +79,4 @@ class Discussion extends React.Component {
 
 
 
-export default Discussion;
+export default Discussion
