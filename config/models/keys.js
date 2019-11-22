@@ -1,5 +1,5 @@
 require('dotenv').config();
 
 module.exports = {
-    MongoURI: process.env.mongopassword
+    MongoURI: process.env.MONGOD_URI || process.env.mongopassword
 }
